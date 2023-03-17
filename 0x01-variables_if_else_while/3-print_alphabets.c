@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Print from a to z and 
- * 	  from A to Z
+ * main - Prints the alphabet in lowercase, and then in uppercase.
  *
  * Return: Always 0.
  */
@@ -10,7 +9,7 @@ int main(void)
 {
         char ch;
 
-        for (ch = 'a'; ch <= 'z'; ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
                 putchar(ch);
 
 	for (ch = 'A'; ch <= 'Z'; ch++)
