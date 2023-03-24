@@ -3,6 +3,7 @@
 /*
  * print_line - Print n time _ if n > 0 else print '\n'.
  * @n: The numbers of _.
+ * Return: void.
  */
 void print_line(int n)
 {
