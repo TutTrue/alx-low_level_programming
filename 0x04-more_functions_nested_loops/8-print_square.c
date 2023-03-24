@@ -1,4 +1,4 @@
-#include "test/main.h"
+#include "main.h"
 
 /*
  * print_square - Print a square of #.
