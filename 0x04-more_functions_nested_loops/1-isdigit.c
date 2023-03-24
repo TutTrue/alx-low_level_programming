@@ -5,10 +5,10 @@
  * @c: Char that will be checked.
  * Return: 1 if its a digit char, and 0 if not.
  */
-int _isdigit(int c)
+int _isalpha(int c)
 {
 	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
 		return (0);
-	else
-		return (1);
+
+	return (1);
 }
