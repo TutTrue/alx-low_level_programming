@@ -1,4 +1,4 @@
-#include "test/main.h"
+#include "main.h"
 
 /**
  * _isupper - Returns 0 if the char c is lowercase
