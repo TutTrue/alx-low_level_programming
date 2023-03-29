@@ -2,13 +2,13 @@
 #include "string.h"
 
 /**
- * _strncat - The _strncat function is similar to the _strcat function,
- * except thatit will use at most n bytes from src;
- * andsrc does not need to be null-terminated if it contains n or more bytes.
- * @dest: first string.
- * @src: second string.
- * @n: number of element that will be concat.
- * Return: Return a pointer to the resulting string dest.
+ * _strncat - Concatenates two strings, taking at most n bytes from src.
+ *
+ * @dest: The destination string.
+ * @src: The source string.
+ * @n: The maximum number of bytes to be used from src.
+ *
+ * Return: A pointer to the resulting string dest.
  */
 char *_strncat(char *dest, char *src, int n)
 {
