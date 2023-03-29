@@ -16,7 +16,7 @@ char *_strncat(char *dest, char *src, int n)
 	int len2 = strlen(src);
 	int i;
 
-	if (len1 + len2 >= n) {
+	if (len1 + len2 < n) {
 		return NULL;
 	}
 
