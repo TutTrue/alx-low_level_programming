@@ -3,7 +3,8 @@
 #include <string.h>
 
 /**
- * _strstr - Finds the first occurrence of the substring needle in the string haystack.
+ * _strstr - Finds the first occurrence of the substring needle
+ * in the string haystack.
  * The terminating null bytes (\0) are not compared
  * @haystack: The string that will be scanned.
  * @needle: This is the small string to be searched with-in haystack string.
@@ -22,7 +23,6 @@ char *_strstr(char *haystack, char *needle)
 			if (needle[i] != *haystack)
 				break;
 		}
-		
 		if (len == i)
 			return (haystack);
 
