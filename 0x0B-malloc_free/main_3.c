@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *_strdup(char *str);
+char *str_concat(char *, char *);
 
 /**
  * main - check the code .
@@ -12,12 +12,32 @@ int main(void)
 {
 	char *s;
 
-	s = _strdup(NULL);
+	s = str_concat("Hello", NULL);
 	if (s == NULL)
 	{
-		printf("failed to allocate memory\n");
+		printf("failed\n");
 		return (1);
 	}
+	printf("%s\n", s);
 	free(s);
+
+    s = str_concat(NULL, "Hello");
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
+
+    s = str_concat(NULL, NULL);
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
+
 	return (0);
 }
