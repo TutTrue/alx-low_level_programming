@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include"main.h"
+#include "main.h"
 
 /**
  * _strdup - get a copy of string in new
@@ -12,12 +12,13 @@
 char *_strdup(char *str)
 {
 	int i;
-	int len = (int) strlen(str);
-	char *p = malloc(sizeof(char) * len + 1);
+	int len;
+	char *p = malloc(sizeof(char) * strlen(str) + 1);
 
 	if (str == NULL || p == NULL)
 		return (NULL);
 
+	len = (int) strlen(str);
 	for (i = 0; i < len; i++)
 	{
 		p[i] = str[i];
