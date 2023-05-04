@@ -22,11 +22,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	for (i = 0; i < index; i++)
 	{
-		prev = p;
-		p = p->next;
+		if (p)
+		{
+			prev = p;
+			p = p->next;
+		}
+		else
+			return (-1);
 	}
-	if (!p)
-		return (-1);
 
 	prev->next = p->next;
 	p->next = NULL;
