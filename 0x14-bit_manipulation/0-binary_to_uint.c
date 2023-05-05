@@ -9,6 +9,8 @@ unsigned int binary_to_uint(const char *b)
 {
 	int digit, index = (strlen(b) - 1), total = 0;
 
+	if (!b)
+		return (0);
 	while (*b)
 	{
 		digit = (*b) - '0';
