@@ -15,15 +15,16 @@ int _pow(int x, int y)
 }
 /**
  * binary_to_uint - convert a binary to unsigned int
- * @b: string contsind 0's and 1's
+ * @b: string contains 0's and 1's
  * Return: unsigned int of binary
 */
 unsigned int binary_to_uint(const char *b)
 {
-	int digit, index = (strlen(b) - 1), total = 0;
+	int digit, index, total = 0;
 
 	if (!b)
 		return (0);
+	index = (strlen(b) - 1);
 	while (*b)
 	{
 		digit = (*b) - '0';
