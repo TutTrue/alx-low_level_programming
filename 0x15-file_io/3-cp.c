@@ -50,6 +50,13 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
+	if (n_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
+		_close(fd_from);
+		_close(fd_to);
+		exit(98);
+	}
 	if (_close(fd_from) == -1 || _close(fd_to) == -1)
 		exit(100);
 	return (0);
