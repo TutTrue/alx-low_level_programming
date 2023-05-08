@@ -42,20 +42,13 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		n_write = write(fd_to, buf, n_read);
-		if (fd_to == -1 || n_write == -1 || n_write != n_read)
+		if (n_write == -1 || n_write != n_read)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			_close(fd_from);
 			_close(fd_to);
 			exit(99);
 		}
-	}
-	if (n_read == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
-		_close(fd_from);
-		_close(fd_to);
-		exit(98);
 	}
 	if (_close(fd_from) == -1 || _close(fd_to) == -1)
 		exit(100);
