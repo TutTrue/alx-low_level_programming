@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 			_close(fd_to);
 			exit(98);
 		}
-		n_write = write(fd_to, buf, BUFSIZE);
+		n_write = write(fd_to, buf, n_read);
 		if (n_write == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
