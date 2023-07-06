@@ -48,7 +48,6 @@ void sorted_list(shash_table_t *ht, shash_node_t *node)
 			tmp->sprev->snext = node;
 			node->sprev = tmp->sprev;
 			tmp->sprev = node;
-			
 			return;
 		}
 		tmp = tmp->snext;
@@ -75,16 +74,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 	    key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
-	index = key_index((const unsigned char *)key, ht->size);
-	/*if (ht->array[index] == NULL)
-	{
-		node = create_node(key, value);
-		if (!node)
-			return (0);
-		ht->array[index] = node;
-		return (1);
-	}*/
-	
+	index = key_index((const unsigned char *)key, ht->size);	
 	cur_node = ht->array[index];
 	while (cur_node)
 	{
@@ -96,7 +86,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		}
 		cur_node = cur_node->next;
 	}
-	/*cur_node = ht->array[index];*/
 	node = create_node(key, value);
 	if (!node)
 		return (0);
@@ -115,6 +104,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 shash_node_t *create_node(const char *key, const char *value)
 {
 	shash_node_t *node = malloc(sizeof(shash_node_t));
+
 	if (!node)
 		return (NULL);
 	node->key = strdup(key);
@@ -214,7 +204,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 
 void shash_table_delete(shash_table_t *ht)
 {
-	long unsigned int i;
+	unsigned long int i;
 	shash_node_t *cur, *temp;
 
 	if (!ht)

@@ -1,6 +1,7 @@
 #include "hash_tables.h"
 /**
  * hash_table_get - retrieves a value associated with a key
+ * @ht: the hash table
  * @key: key to retrieve the value associated with
  * Return: the value of the key
  */
