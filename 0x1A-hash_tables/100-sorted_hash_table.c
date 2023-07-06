@@ -21,6 +21,11 @@ shash_table_t *shash_table_create(unsigned long int size)
 	shash_table->shead = shash_table->stail = NULL;
 	return (shash_table);
 }
+/**
+ * sorted_list: create the sorted linked list of the hash table
+ * @ht: the hash table
+ * @node: node to insert
+ */
 void sorted_list(shash_table_t *ht, shash_node_t *node)
 {
 	shash_node_t *tmp;
@@ -126,6 +131,7 @@ shash_node_t *create_node(const char *key, const char *value)
 
 /**
  * shash_table_get - retrieves a value associated with a key
+ * @ht: the hash table
  * @key: key to retrieve the value associated with
  * Return: the value of the key
  */
