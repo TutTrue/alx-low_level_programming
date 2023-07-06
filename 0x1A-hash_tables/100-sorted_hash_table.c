@@ -39,7 +39,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 	    key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
-	index = key_index((const unsigned char *)key, ht->size);	
+	index = key_index((const unsigned char *)key, ht->size);
 	cur_node = ht->array[index];
 	while (cur_node)
 	{
