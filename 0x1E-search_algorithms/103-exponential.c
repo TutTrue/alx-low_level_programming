@@ -1,6 +1,5 @@
 #include "search_algos.h"
 
-void print_arr(int *array, int start, int end);
 /**
 * exponential_search -	function that searches for a value in
 * an array of integers using the exponential search algorithm
@@ -64,14 +63,14 @@ int binary_search(int *array, size_t size, int value)
 /**
 * print_arr - print array from start and end
 * @array: array of integers
-* @start: start index of array
-* @end: end index of array
+* @s: start index of array
+* @e: end index of array
 */
-void print_arr(int *array, int start, int end)
+void print_arr(int *array, size_t s, size_t e)
 {
-	int i;
+	size_t i;
 
-	for (i = start; i < end; i++)
+	for (i = s; i < e; i++)
 		printf("%d, ", array[i]);
-	printf("%d\n", array[end]);
+	printf("%d\n", array[e]);
 }
